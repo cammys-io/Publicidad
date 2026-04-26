@@ -1,5 +1,5 @@
-import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, AfterViewInit, inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
@@ -9,11 +9,75 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class App {
+export class App implements AfterViewInit {
   private sanitizer = inject(DomSanitizer);
+  private platformId = inject(PLATFORM_ID);
+
+  ngAfterViewInit(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
+    this.setupScrollAnimations();
+    this.setupCounters();
+    this.setupNavbarScroll();
+  }
+
+  private setupScrollAnimations(): void {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-visible');
+            observer.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('[data-animate]').forEach((el) => observer.observe(el));
+  }
+
+  private setupCounters(): void {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            const el = e.target as HTMLElement;
+            const target = parseInt(el.dataset['counter'] ?? '0');
+            const suffix = el.dataset['suffix'] ?? '';
+            const duration = 1800;
+            const start = performance.now();
+            const tick = (now: number) => {
+              const p = Math.min((now - start) / duration, 1);
+              const eased = 1 - Math.pow(1 - p, 3);
+              el.textContent = Math.round(eased * target) + suffix;
+              if (p < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+            observer.unobserve(el);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+    document.querySelectorAll('[data-counter]').forEach((el) => observer.observe(el));
+  }
+
+  private setupNavbarScroll(): void {
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      nav?.classList.toggle('nav-scrolled', window.scrollY > 40);
+    }, { passive: true });
+  }
 
   phone = '9517688543';
   phoneDisplay = '951 768 8543';
+
+  particles = Array.from({ length: 18 }, (_, i) => ({
+    id: i,
+    left: `${Math.random() * 100}%`,
+    size: `${Math.random() * 4 + 2}px`,
+    duration: `${Math.random() * 8 + 6}s`,
+    delay: `${Math.random() * 6}s`,
+  }));
 
   mapEmbedUrl: SafeResourceUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
     'https://www.google.com/maps?q=Auto+Servicio+Quevedo+Express,+Av.+Morelos+No.+29,+San+Antonio+de+la+Cal,+Oaxaca&z=18&output=embed'
