@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "npm run tw:build && ng build",
   "outputDirectory": "dist/quevedo-express/browser",
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
