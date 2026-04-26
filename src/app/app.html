@@ -1,0 +1,413 @@
+<div class="min-h-screen bg-white text-slate-900 font-['Outfit']">
+
+  <!-- ─── NAVBAR ─────────────────────────────────────────────── -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 bg-red-600 rounded-lg flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19.07 4.93L17.65 3.5c-.39-.39-1.02-.39-1.41 0l-10.6 10.6c-.39.39-.39 1.02 0 1.41l1.41 1.41c.39.39 1.02.39 1.41 0l10.6-10.6c.39-.39.39-1.02 0-1.41zM5.5 13.5l-2.04 4.04c-.2.4-.11.88.23 1.22.39.39 1.02.39 1.41 0l4.04-2.04-3.64-3.22z"/>
+          </svg>
+        </div>
+        <div class="leading-none">
+          <p class="font-black text-slate-900 text-sm" style="font-family:'Space Grotesk',sans-serif">Quevedo Express</p>
+          <p class="text-xs text-slate-400 mt-0.5">Taller Mecánico · Oaxaca</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <a [href]="'https://wa.me/52' + phone" target="_blank"
+           class="hidden sm:flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-semibold text-sm transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 5.618h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884z"/>
+          </svg>
+          WhatsApp
+        </a>
+        <a [href]="'tel:' + phone"
+           class="flex items-center gap-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-sm font-bold px-5 py-2.5 rounded-lg transition-colors duration-200">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.893 1.038a1 1 0 00-.464 1.417c.853 1.611 2.655 3.409 4.266 4.263a1 1 0 001.417-.464l1.038-1.893a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+          </svg>
+          Llamar
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ──────────────────────────────────────────────── -->
+  <header class="relative bg-[#0a1628] overflow-hidden pt-16">
+    <!-- Acento rojo vertical izquierdo -->
+    <div class="absolute top-0 left-0 w-1.5 h-full bg-red-600"></div>
+    <!-- Triángulo de transición -->
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-white" style="clip-path:polygon(0 100%,100% 0,100% 100%)"></div>
+    <!-- Grid decorativo -->
+    <div class="absolute inset-0 opacity-5"
+         style="background-image:linear-gradient(rgba(255,255,255,.3) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.3) 1px,transparent 1px);background-size:60px 60px"></div>
+
+    <div class="relative max-w-6xl mx-auto px-6 pt-20 pb-32 z-10">
+      <!-- Eyebrow -->
+      <div class="flex items-center gap-3 mb-8">
+        <div class="h-px w-10 bg-red-500"></div>
+        <span class="text-red-400 text-xs font-bold tracking-widest uppercase">Taller Mecánico Certificado · Oaxaca</span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight leading-none mb-4"
+          style="font-family:'Space Grotesk',sans-serif">
+        <span class="text-white">Auto Servicio</span>
+      </h1>
+      <h2 class="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight leading-none mb-10"
+          style="font-family:'Space Grotesk',sans-serif">
+        <span class="text-red-500">Quevedo</span>
+        <span class="text-white"> Express</span>
+      </h2>
+
+      <!-- Descripción -->
+      <p class="text-slate-300 text-lg sm:text-xl max-w-xl leading-relaxed mb-10">
+        Diagnóstico, reparación y mantenimiento automotriz con más de
+        <strong class="text-white font-semibold">15 años de experiencia</strong>
+        al servicio de Oaxaca.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a [href]="'tel:' + phone"
+           class="flex items-center justify-center gap-3 bg-red-600 hover:bg-red-700 active:scale-95 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-xl shadow-red-900/40 transition-all duration-200">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.893 1.038a1 1 0 00-.464 1.417c.853 1.611 2.655 3.409 4.266 4.263a1 1 0 001.417-.464l1.038-1.893a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+          </svg>
+          {{ phoneDisplay }}
+        </a>
+        <a [href]="'https://wa.me/52' + phone" target="_blank"
+           class="flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 active:scale-95 border border-white/20 hover:border-white/40 text-white font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 5.618h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884z"/>
+          </svg>
+          WhatsApp
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="mt-16 flex flex-wrap gap-3">
+        <div class="bg-white/8 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-4">
+          <p class="text-2xl font-black text-white">15+</p>
+          <p class="text-slate-400 text-xs mt-0.5">Años de experiencia</p>
+        </div>
+        <div class="bg-white/8 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-4">
+          <p class="text-2xl font-black text-white">500+</p>
+          <p class="text-slate-400 text-xs mt-0.5">Clientes satisfechos</p>
+        </div>
+        <div class="bg-white/8 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-4">
+          <p class="text-2xl font-black text-white">4</p>
+          <p class="text-slate-400 text-xs mt-0.5">Servicios especializados</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── SERVICIOS (blanco) ─────────────────────────────────── -->
+  <section class="bg-white py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-14">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-1 h-7 bg-red-600 rounded-full"></div>
+          <span class="text-red-600 text-xs font-bold tracking-widest uppercase">Lo que hacemos</span>
+        </div>
+        <h2 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight">
+          Nuestros Servicios
+        </h2>
+        <p class="mt-4 text-slate-500 text-lg max-w-2xl">
+          Equipamiento profesional y técnicos certificados para resolver cualquier necesidad automotriz.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        @for (s of services; track s.title; let i = $index) {
+          <div
+            class="group bg-white border border-gray-200 hover:border-red-200 rounded-2xl p-7 transition-all duration-300 hover:shadow-xl hover:shadow-slate-100 hover:-translate-y-1"
+            style="animation: slideInUp 0.5s ease-out both"
+            [style.animation-delay]="i * 80 + 'ms'"
+          >
+            <div class="w-13 h-13 mb-5">
+              <div class="w-12 h-12 bg-red-50 group-hover:bg-red-100 rounded-xl flex items-center justify-center transition-colors duration-300">
+                <svg [innerHTML]="s.iconSvg" class="w-6 h-6 text-red-600"></svg>
+              </div>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">{{ s.title }}</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">{{ s.desc }}</p>
+            <div class="mt-5 flex items-center gap-1 text-red-600 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span>Saber más</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── INFO (gris) ───────────────────────────────────────── -->
+  <section class="bg-slate-50 py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-14">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-1 h-7 bg-blue-600 rounded-full"></div>
+          <span class="text-blue-600 text-xs font-bold tracking-widest uppercase">Información de contacto</span>
+        </div>
+        <h2 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight">
+          Estamos aquí para ti
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Horario -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div class="w-11 h-11 bg-red-600 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00-.293.707l-.707.707a1 1 0 101.414 1.414l1.414-1.414A1 1 0 0011 9.414V6z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-5">Horario de Atención</h3>
+          <div class="space-y-0 text-sm divide-y divide-gray-100">
+            <div class="flex justify-between items-center py-3">
+              <span class="font-semibold text-slate-700">Lun – Vie</span>
+              <span class="text-slate-500 text-right">9:00–15:00<br/>16:00–18:00</span>
+            </div>
+            <div class="flex justify-between items-center py-3">
+              <span class="font-semibold text-slate-700">Sábado</span>
+              <span class="text-slate-500">9:00–15:00</span>
+            </div>
+            <div class="flex justify-between items-center py-3">
+              <span class="font-semibold text-slate-700">Domingo</span>
+              <span class="text-red-500 font-bold">Cerrado</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teléfono -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div class="w-11 h-11 bg-blue-600 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.893 1.038a1 1 0 00-.464 1.417c.853 1.611 2.655 3.409 4.266 4.263a1 1 0 001.417-.464l1.038-1.893a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-5">Contáctanos</h3>
+          <a [href]="'tel:' + phone"
+             class="block text-2xl font-black text-slate-900 hover:text-red-600 transition-colors mb-1">
+            {{ phoneDisplay }}
+          </a>
+          <p class="text-slate-400 text-sm mb-6">Disponible por llamada o WhatsApp</p>
+          <div class="flex flex-col gap-3">
+            <a [href]="'tel:' + phone"
+               class="flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold px-4 py-2.5 rounded-lg transition-colors">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.893 1.038a1 1 0 00-.464 1.417c.853 1.611 2.655 3.409 4.266 4.263a1 1 0 001.417-.464l1.038-1.893a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+              </svg>
+              Llamar ahora
+            </a>
+            <a [href]="'https://wa.me/52' + phone" target="_blank"
+               class="flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-bold px-4 py-2.5 rounded-lg transition-colors">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 5.618h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884z"/>
+              </svg>
+              Enviar WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Dirección -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div class="w-11 h-11 bg-slate-800 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-5">Nuestra Ubicación</h3>
+          <address class="not-italic text-slate-600 text-sm leading-loose">
+            <p class="font-bold text-slate-900 text-base">Av. Morelos No. 29, Centro</p>
+            <p>San Antonio de la Cal, 71263</p>
+            <p class="text-blue-600 font-semibold">Oaxaca, México</p>
+          </address>
+          <div class="mt-5 pt-5 border-t border-gray-100">
+            <p class="text-xs text-slate-400">A poca distancia del mercado local</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIOS (blanco) ──────────────────────────────── -->
+  <section class="bg-white py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-14">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-1 h-7 bg-red-600 rounded-full"></div>
+          <span class="text-red-600 text-xs font-bold tracking-widest uppercase">Opiniones reales</span>
+        </div>
+        <h2 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight">
+          Lo que dicen nuestros Clientes
+        </h2>
+        <p class="mt-4 text-slate-500 text-lg">Satisfacción garantizada en cada servicio</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        @for (testimonial of testimonials; track testimonial.name; let i = $index) {
+          <div
+            class="bg-white border border-gray-200 rounded-2xl p-7 hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
+            style="animation: slideInUp 0.5s ease-out both"
+            [style.animation-delay]="i * 80 + 'ms'"
+          >
+            <!-- Estrellas -->
+            <div class="flex gap-0.5 mb-4">
+              @for (star of [1,2,3,4,5]; track star) {
+                <svg class="w-4 h-4" [attr.fill]="star <= testimonial.stars ? '#f59e0b' : '#e5e7eb'" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+              }
+            </div>
+
+            <!-- Comentario -->
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              "{{ testimonial.comment }}"
+            </p>
+
+            <!-- Autor -->
+            <div class="flex items-center gap-3 pt-5 border-t border-gray-100">
+              <div class="w-9 h-9 bg-red-600 rounded-full flex items-center justify-center shrink-0">
+                <span class="text-white text-xs font-black">{{ testimonial.name[0] }}</span>
+              </div>
+              <div>
+                <p class="font-bold text-slate-900 text-sm leading-none">{{ testimonial.name }}</p>
+                <p class="text-red-600 text-xs mt-0.5">{{ testimonial.service }}</p>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── MAPA (gris) ───────────────────────────────────────── -->
+  <section class="bg-slate-50 py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-14">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-1 h-7 bg-blue-600 rounded-full"></div>
+          <span class="text-blue-600 text-xs font-bold tracking-widest uppercase">Encuéntranos</span>
+        </div>
+        <h2 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight">
+          ¿Cómo Llegar?
+        </h2>
+        <p class="mt-4 text-slate-500 text-lg">Centro de San Antonio de la Cal, Oaxaca</p>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-md h-96">
+        <iframe
+          [src]="mapEmbedUrl"
+          class="w-full h-full border-0"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-5">
+        @for (step of [
+          {num:'1', title:'En Auto', desc:'Busca "Auto Servicio Quevedo Express" en Google Maps para obtener indicaciones.'},
+          {num:'2', title:'A Pie', desc:'Av. Morelos, Centro. A poca distancia del mercado local.'},
+          {num:'3', title:'¿Dudas?', desc:'Escríbenos por WhatsApp y te enviamos la ubicación exacta.'}
+        ]; track step.num) {
+          <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm flex items-start gap-4">
+            <div class="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center shrink-0 text-white font-black text-sm">
+              {{ step.num }}
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 mb-1">{{ step.title }}</h4>
+              <p class="text-slate-500 text-sm leading-relaxed">{{ step.desc }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA FINAL ─────────────────────────────────────────── -->
+  <section class="relative bg-[#0a1628] overflow-hidden py-20">
+    <!-- Diagonal superior -->
+    <div class="absolute top-0 left-0 right-0 h-16 bg-slate-50" style="clip-path:polygon(0 0,100% 0,100% 100%)"></div>
+    <!-- Acento rojo -->
+    <div class="absolute top-0 right-0 w-1.5 h-full bg-red-600"></div>
+    <!-- Grid decorativo -->
+    <div class="absolute inset-0 opacity-5"
+         style="background-image:linear-gradient(rgba(255,255,255,.3) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.3) 1px,transparent 1px);background-size:60px 60px"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-6 pt-16 text-center">
+      <span class="inline-block bg-red-600 text-white text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
+        Agenda tu cita hoy
+      </span>
+      <h2 class="text-4xl sm:text-5xl font-black text-white tracking-tight mb-4">
+        ¿Listo para cuidar tu vehículo?
+      </h2>
+      <p class="text-slate-300 text-lg max-w-xl mx-auto mb-10">
+        Contáctanos ahora y nuestros técnicos te atenderán de inmediato.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a [href]="'tel:' + phone"
+           class="flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 active:scale-95 text-white font-bold px-8 py-4 rounded-xl transition-all duration-200 shadow-xl shadow-red-900/40">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.893 1.038a1 1 0 00-.464 1.417c.853 1.611 2.655 3.409 4.266 4.263a1 1 0 001.417-.464l1.038-1.893a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+          </svg>
+          Llamar Ahora
+        </a>
+        <a [href]="'https://wa.me/52' + phone" target="_blank"
+           class="flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white font-bold px-8 py-4 rounded-xl transition-all duration-200">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 5.618h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884z"/>
+          </svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────── -->
+  <footer class="bg-[#070f1c] border-t border-white/5 py-10">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 bg-red-600 rounded-lg flex items-center justify-center">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19.07 4.93L17.65 3.5c-.39-.39-1.02-.39-1.41 0l-10.6 10.6c-.39.39-.39 1.02 0 1.41l1.41 1.41c.39.39 1.02.39 1.41 0l10.6-10.6c.39-.39.39-1.02 0-1.41zM5.5 13.5l-2.04 4.04c-.2.4-.11.88.23 1.22.39.39 1.02.39 1.41 0l4.04-2.04-3.64-3.22z"/>
+          </svg>
+        </div>
+        <div class="leading-none">
+          <p class="font-black text-white text-sm" style="font-family:'Space Grotesk',sans-serif">
+            Auto Servicio Quevedo Express
+          </p>
+          <p class="text-slate-500 text-xs mt-0.5">Av. Morelos No. 29 · San Antonio de la Cal, Oaxaca</p>
+        </div>
+      </div>
+      <p class="text-slate-600 text-xs">© 2025 Auto Servicio Quevedo Express. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</div>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+  @keyframes slideInUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #mapContainer {
+    background: #f1f5f9;
+  }
+</style>
