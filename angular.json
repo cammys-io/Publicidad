@@ -52,7 +52,11 @@
             "styles": [
               "src/generated-styles.css",
               "src/styles.css"
-            ]
+            ],
+            "outputPath": {
+              "base": "dist/quevedo-express",
+              "browser": ""
+            }
           },
           "configurations": {
             "production": {
